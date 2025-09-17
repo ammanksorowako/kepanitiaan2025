@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagan Kepanitiaan Interaktif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .photo-placeholder {
+            cursor: pointer;
+            position: relative;
+            background-color: #e2e8f0; /* bg-slate-200 */
+            border: 2px dashed #94a3b8; /* border-slate-400 */
+            transition: all 0.3s ease;
+            overflow: hidden; /* Ensures the uploaded image fits */
+        }
+        .photo-placeholder:hover {
+            background-color: #cbd5e1; /* bg-slate-300 */
+            border-color: #64748b; /* border-slate-500 */
+        }
+        /* Plus icon in the center */
+        .photo-placeholder::before,
+        .photo-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #64748b; /* text-slate-500 */
+            transform: translate(-50%, -50%);
+        }
+        .photo-placeholder::before {
+            width: 20px;
+            height: 2px;
+        }
+        .photo-placeholder::after {
+            width: 2px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Hidden file input for image upload -->
+    <input type="file" id="imageUpload" class="hidden" accept="image/*">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Struktur Kepanitiaan</h1>
+            <p class="text-slate-600 mt-2 text-lg">Ujian Sekolah, Tes Kompetensi Akademik, dan Karya Tulis Ilmiah (KTI) TA 2025/2026</p>
+            <p class="text-sm text-slate-500 mt-1">SMP YPS Singkole</p>
+        </header>
+
+        <!-- Main Structure -->
+        <div class="space-y-12">
+
+            <!-- Penanggung Jawab & Pengarah -->
+            <section class="text-center">
+                <div class="inline-block bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 text-sky-700">Penanggung Jawab</h2>
+                    <div class="flex justify-center items-center flex-col">
+                        <div class="photo-placeholder w-24 h-24 rounded-full mb-2"></div>
+                        <h3 class="font-semibold text-lg">Kamal Djabbar, S.Pd., M.Pd.</h3>
+                        <p class="text-sm text-slate-500">Plh. Kepala Sekolah</p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                     <h2 class="text-xl font-bold mb-4 text-sky-700">Pengarah</h2>
+                     <div class="flex justify-center flex-wrap gap-8">
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md min-w-[200px]">
+                            <div class="photo-placeholder w-20 h-20 rounded-full mb-2"></div>
+                            <h3 class="font-semibold text-center">Kamal Djabbar, S.Pd., M.Pd.</h3>
+                            <p class="text-sm text-slate-500 text-center">Wakasek Bid. Kurikulum</p>
+                        </div>
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md min-w-[200px]">
+                            <div class="photo-placeholder w-20 h-20 rounded-full mb-2"></div>
+                            <h3 class="font-semibold text-center">Fadli Herman, S.Pd., M.Pd., Gr.</h3>
+                            <p class="text-sm text-slate-500 text-center">Wakasek Bid. Kesiswaan</p>
+                        </div>
+                        <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md min-w-[200px]">
+                            <div class="photo-placeholder w-20 h-20 rounded-full mb-2"></div>
+                            <h3 class="font-semibold text-center">Mastang Fauzan R., S.Pd., M.Pd.</h3>
+                            <p class="text-sm text-slate-500 text-center">Wakasek Bid. Sarpras</p>
+                        </div>
+                     </div>
+                </div>
+            </section>
+            
+            <hr class="border-t-2 border-slate-300">
+
+            <!-- Pelaksana Inti -->
+            <section class="text-center">
+                <h2 class="text-2xl font-bold mb-6 text-sky-700">Pelaksana</h2>
+                <div class="flex justify-center items-start flex-wrap gap-8">
+                    <div class="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="photo-placeholder w-28 h-28 rounded-full mb-3"></div>
+                        <h3 class="font-bold text-xl text-amber-600">Ketua</h3>
+                        <p class="font-semibold text-lg">Abdul Rahman, S.Pd., M.Pd.</p>
+                    </div>
+                    <div class="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="photo-placeholder w-28 h-28 rounded-full mb-3"></div>
+                        <h3 class="font-bold text-xl text-amber-600">Sekretaris</h3>
+                        <p class="font-semibold text-lg">Nini Andriani, S.P.d., Gr.</p>
+                    </div>
+                    <div class="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="photo-placeholder w-28 h-28 rounded-full mb-3"></div>
+                        <h3 class="font-bold text-xl text-amber-600">Bendahara</h3>
+                        <p class="font-semibold text-lg">Suriani, S.Pd.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-t-2 border-slate-300">
+
+            <!-- Seksi-Seksi -->
+            <section>
+                 <h2 class="text-2xl font-bold mb-6 text-center text-sky-700">Seksi-Seksi</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">A. Seksi Perlengkapan</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Taslim Persada, S.Pd.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Yusman, S.Pd. Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Dwi Wulandari S.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Harlin Chory Ningtyas, S.Pd.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">B. Seksi Dokumentasi & Publikasi</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Faisal, S.Si.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Arifin, T. Badu, S.Pd., Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Dwi Wulandari, S.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Ammy Meylan De'e, S.Pd.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">C. Seksi Konsumsi</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Siti Dzuriyati, S.Si., Gr.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Nurmawati, S.Si, Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Panca Dian Evi</p></div>
+                        </div>
+                    </div>
+
+                     <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">D. Seksi Ujian Sekolah</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Arifin T. Badu, S.Pd., Gr.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>I Komang Nuriana, S.Pd., M.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Darius Jemparut, S.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Fernanda B. Tosari, S.Pd.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">E. Seksi Tes Kompetensi Akademik</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Irawaty Katu, S.Pd.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Stevany Somalinggi, S.Si., M.Pd.Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Mirawati, S.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Yuliani, S.Pd.</p></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Seksi -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">F. Seksi Karya Tulis Ilmiah</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Sulistiani, S.Pd.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Petta Oti Tampang A., S.Th., M.Pd.K.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Wiwik Purwita, S.Pd., Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Sarmila, S.Pd.</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Seksi (Large) -->
+                    <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 lg:col-span-3">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">G. Seksi Pembimbingan dan Pengelompokan KTI</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                             <div class="flex items-center gap-4">
+                                <div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div>
+                                <div><p class="font-semibold">Ibnu Hajar Ndali, Lc., Gr.</p><span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full">Koordinator</span></div>
+                            </div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Kuran Puasa, S.Pd., M.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Algazali, S.Pd., M.Pd.Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Zamat Suaib, S.Phil.I, M.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Arfah Syam, S.Pd.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Yusman, S.Pd., Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Navy Nalalugina, S.Si. Gr.</p></div>
+                            <div class="flex items-center gap-4"><div class="photo-placeholder w-16 h-16 rounded-full flex-shrink-0"></div><p>Ahmad Yassar, S.Kom</p></div>
+                        </div>
+                    </div>
+
+                 </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageUpload = document.getElementById('imageUpload');
+            const placeholders = document.querySelectorAll('.photo-placeholder');
+            
+            let activePlaceholder = null;
+
+            placeholders.forEach(placeholder => {
+                placeholder.addEventListener('click', () => {
+                    // Store which placeholder was clicked
+                    activePlaceholder = placeholder;
+                    // Trigger the hidden file input
+                    imageUpload.click();
+                });
+            });
+
+            imageUpload.addEventListener('change', (event) => {
+                if (event.target.files && event.target.files[0] && activePlaceholder) {
+                    const reader = new FileReader();
+                    
+                    reader.onload = (e) => {
+                        // Set the background image of the clicked placeholder
+                        activePlaceholder.style.backgroundImage = `url('${e.target.result}')`;
+                        // Remove the plus icon by clearing inner HTML
+                        activePlaceholder.innerHTML = ''; 
+                        // Add classes for proper image display
+                        activePlaceholder.classList.add('bg-cover', 'bg-center');
+                        activePlaceholder.classList.remove('bg-slate-200'); // Remove placeholder background
+                    };
+                    
+                    reader.readAsDataURL(event.target.files[0]);
+                }
+                // Reset file input to allow uploading the same file again
+                event.target.value = '';
+            });
+        });
+    </script>
+
+</body>
+</html>
